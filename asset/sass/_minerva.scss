@@ -1,0 +1,75 @@
+header {
+	background-color:#909C8D;
+}
+
+#search-form input[type="text"] {
+    background-color: #FFFFFF;
+    color: #000;
+    border: 0;
+}
+
+
+@mixin button {
+    color: $accent;
+    &:hover {
+        background-color: $accent;
+        color: #fff;
+        border-bottom-width: 0px;
+    }
+
+    &.inactive {
+        background-color: $light;
+        color: #999;;
+    }
+}
+
+#linked-resources .linked-header {display:none;}
+
+
+#linked-resources > table > thead > tr > th {display:none;}
+
+#linked-resources > table > tbody > tr > td:nth-child(2) {display:none}
+#linked-resources > table > tbody > tr > td:nth-child(3) {display:none}
+
+#linked-resources > table > caption {display:none;}
+
+.linked-resource > td {border-bottom:none;}
+
+#item-linked .resource-link img {
+    display:none;
+}
+
+#content .property .resource-link img {
+    display:none;
+}
+
+.resource.show .media-list .resource-name {
+    display:none;
+}
+
+footer {display:none;}
+
+
+
+element.style {
+}
+.resource.show #content>h3:first-of-type {
+    margin-bottom: 0;
+    display: block;
+    width: 80%;
+    float: right;
+    word-break: break-word;
+    margin: 0 6px 24px 0;
+}
+
+#item-linked #linked-resources table {
+    margin-left: 170px;
+}
+
+.resource.show .property {
+    margin-bottom: 12px;
+}
+
+.resource.show .property.dcterms-title {display:none;}
+
+.resource.show .property.dcterms-description h4 {display:none;}
