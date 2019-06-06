@@ -7,20 +7,11 @@ $itemMedia = $item->media();
 
 ?>
 
-<?php foreach ($item->media() as $media): ?>
-    <?php $mediaType = $media->mediaType(); ?>
-    <?php $mediaRenderer = $media->renderer(); ?>
-    <?php if ((strpos($mediaType, 'image') !== false) || (strpos($mediaRenderer, 'youtube') !== false)): ?>
-        <?php $lightMedia[] = $media; ?>
-    <?php else: ?>
-        <?php $otherMedia[] = $media; ?>
-    <?php endif; ?>
-<?php endforeach; ?>
 
 <?php echo $this->pageTitle($item->displayTitle(), 2); ?>
 <?php $this->trigger('view.show.before'); ?>
 <?php if ($item->media()): ?>
-<img src="<?php echo $escape($media->thumbnailUrl('medium')); ?>" />
+<?php echo $this->universalViewer($item); ?>
 <?php endif; ?>
 <?php echo $item->displayValues(); ?>
 <div class="property">
